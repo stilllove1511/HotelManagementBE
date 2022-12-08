@@ -1,9 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es2020",
-        "outDir": "build",
+        "target": "ES6",
         "module": "commonjs",
-        "strictNullChecks": true
+        "outDir": "js",
+        "watch": true,
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true,
     },
-    "include": ["src/**/*"]
+    "include": [
+        "./src/**/*"
+, "src/configs/.ts"    ],
 }
