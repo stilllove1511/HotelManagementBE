@@ -13,9 +13,13 @@ const swaggerDefinition = {
     basePath: '/api',
     tags: [
         {
-            name: '[Admin]: admins',
-            description: 'Quản lý Hotel',
+            name: '[USER]: user',
+            description: 'Thông tin user',
         },
+        {
+            name: '[LOGIN]: account',
+            description: "Đăng nhập"
+        }
     ],
     securityDefinitions: {
         Bearer: {
