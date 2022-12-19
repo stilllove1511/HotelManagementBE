@@ -1,6 +1,7 @@
 import { Router } from 'express'
-// import AdminRouting from "./user"
+import RoomRouting from "./Room"
+import UserRouting from "./User"
 const router = Router();
-
-// router.use('/a', AdminRouting);
+router.use('/list-user', UserRouting)
+router.use('/room', RoomRouting);
 export default router;

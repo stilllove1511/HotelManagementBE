@@ -6,7 +6,7 @@ let ExtractJwt = PassportJWT.ExtractJwt;
 
 passport.use(new JwtStrategy({
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken('Authorization'),
-    secretOrKey: 'intern-web-eastgate'
+    secretOrKey: process.env.SECRET_OR_KEY || 'intern-web-eastgate'
 }, async (payload, done) => {
     try {
         const userAccount = await AccountModel.findOne({ id: payload.id })

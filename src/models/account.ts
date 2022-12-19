@@ -5,6 +5,7 @@ interface IAccount {
     email: string;
     role: string;
     id: string;
+    resetPasswordToken: string;
 }
 
 const accountSchema = new Schema<IAccount>({
@@ -12,6 +13,7 @@ const accountSchema = new Schema<IAccount>({
     email: { type: String, required: true },
     password: { type: String, required: true },
     role: { type: String, required: true },
+    resetPasswordToken: { type: String }
 }, {
     timestamps: true,
     collection: 'accounts'

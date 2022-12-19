@@ -12,13 +12,30 @@ const swaggerDefinition = {
     host: process.env.API_HOST,
     basePath: '/api',
     tags: [
+
+        {
+            name: '[LOGIN]: account',
+            description: "Đăng nhập"
+        },
+        {
+            name: '[ADMIN]: room',
+            description: 'Thông tin room admin'
+        },
+        {
+            name: '[ADMIN]: List user',
+            description: 'Thông tin user',
+        },
         {
             name: '[USER]: user',
             description: 'Thông tin user',
         },
         {
-            name: '[LOGIN]: account',
-            description: "Đăng nhập"
+            name: '[USER]: room',
+            description: 'Thông tin room user'
+        },
+        {
+            name: '[USER]: Rent-Room',
+            description: 'Thuê phòng'
         }
     ],
     securityDefinitions: {
